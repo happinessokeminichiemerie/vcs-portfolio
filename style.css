@@ -106,3 +106,24 @@ body {
 footer {
   padding: 24px 24px 72px;     /* extra bottom space so the button doesn't cover text */
 }
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 100;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  padding: 10px 14px;
+  background: #0b5fff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  z-index: 200;
+}
+footer {
+  padding: 24px 24px 72px;
+}
