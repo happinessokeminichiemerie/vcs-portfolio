@@ -1,0 +1,108 @@
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* ---------- Task 1(a): Navigation ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  background: #fff;            /* Task 3(a) */
+  position: sticky;            /* Task 3(a) */
+  top: 0;                      /* Task 3(a) */
+  z-index: 100;                /* Task 3(a) */
+  border-bottom: 1px solid #ddd;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #111;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;            /* removes bullets */
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+.nav-links a:hover {
+  color: #0b5fff;
+}
+
+/* ---------- Task 1(b): Hero ---------- */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* vertical centre */
+  align-items: center;         /* horizontal centre */
+  text-align: center;
+  gap: 12px;
+  padding: 24px;
+}
+.btn {
+  padding: 12px 24px;
+  background: #0b5fff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* ---------- Task 2: Skills cards ---------- */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 24px;
+}
+.card {
+  flex: 1 1 180px;
+  position: relative;          /* anchor for the label */
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.card a {
+  margin-top: auto;            /* pushes link to the bottom */
+}
+.label {
+  position: absolute;          /* Task 2(c) */
+  top: 8px;
+  right: 8px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  background: #0b5fff;
+  color: #fff;
+  border-radius: 999px;
+}
+
+/* ---------- Task 3(b): Back to top ---------- */
+.back-to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  padding: 10px 14px;
+  background: #0b5fff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  z-index: 200;
+}
+footer {
+  padding: 24px 24px 72px;     /* extra bottom space so the button doesn't cover text */
+}
