@@ -2,72 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Flex test</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; }
+    h3 { margin: 16px 0 4px; }
+    .box { display: flex; background: #eee; margin-bottom: 8px; }
+    .item { height: 50px; background: #0b5fff; border-right: 1px solid #fff; }
+    .a { width: 1000px; }
+    .a .item { width: 160px; }
+    .b { width: 1200px; }
+    .c { width: 600px; }
+    .c .item { flex-basis: 400px; }
+  </style>
 </head>
 <body>
 
-  <header class="site-header">
-    <a href="#top" class="logo">Happy Boy</a>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <h3>(a) space-between</h3>
+  <div class="box a" id="a1" style="justify-content: space-between">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
 
-  <section class="hero" id="top">
-    <h1>Happy Boy</h1>
-    <p>Aspiring web developer building clean, responsive websites.</p>
-    <a href="#projects" class="btn">View my work</a>
-  </section>
+  <h3>(a) space-around</h3>
+  <div class="box a" id="a2" style="justify-content: space-around">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
 
-  <section class="cards" id="skills">
-  <article class="card">
-    <span class="label">Expert</span>
-    <h3>HTML</h3>
-    <p>Semantic, accessible markup.</p>
-    <a href="#">Learn more</a>
-  </article>
-  <article class="card">
-    <span class="label">Expert</span>
-    <h3>CSS</h3>
-    <p>Layouts with Flexbox, positioning and responsive design, plus a longer description to test the alignment.</p>
-    <a href="#">Learn more</a>
-  </article>
-  <article class="card">
-    <span class="label">Learning</span>
-    <h3>JavaScript</h3>
-    <p>Learning the basics of DOM and events.</p>
-    <a href="#">Learn more</a>
-  </article>
-  <article class="card">
-    <span class="label">Learning</span>
-    <h3>Git</h3>
-    <p>Version control and GitHub.</p>
-    <a href="#">Learn more</a>
-  </article>
-  <article class="card">
-    <span class="label">New</span>
-    <h3>Flexbox</h3>
-    <p>One-dimensional layouts.</p>
-    <a href="#">Learn more</a>
-  </article>
-  <article class="card">
-    <span class="label">New</span>
-    <h3>Positioning</h3>
-    <p>Sticky, fixed and absolute.</p>
-    <a href="#">Learn more</a>
-  </article>
-</section>
-<footer>
-  <p>&copy; 2026 Happy Boy</p>
-</footer>
-<a href="#top" class="back-to-top">↑ Top</a>
+  <h3>(a) space-evenly</h3>
+  <div class="box a" id="a3" style="justify-content: space-evenly">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
+
+  <h3>(b) flex-grow</h3>
+  <div class="box b" id="b">
+    <div class="item" style="flex: 1 1 200px"></div>
+    <div class="item" style="flex: 2 1 200px"></div>
+    <div class="item" style="flex: 1 1 200px"></div>
+  </div>
+
+  <h3>(c) flex-shrink</h3>
+  <div class="box c" id="c">
+    <div class="item" style="flex-shrink: 1"></div>
+    <div class="item" style="flex-shrink: 2"></div>
+  </div>
 
 </body>
 </html>
